@@ -77,7 +77,7 @@ export class WebSocketConnectionProvider {
             }
             this.onIncomingMessageActivityEmitter.fire(undefined);
         };
-        this.socket = socket;
+        (this.socket as ReconnectingWebSocket) = socket;
     }
 
     /**
